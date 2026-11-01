@@ -949,6 +949,30 @@
     }
 }
 
+/* Categoría 11: pruebas de combinaciones */
+.categoria-combinaciones .btn-danger.btn-hover-shadow {
+    background-color: #B91C1C;
+}
+
+.categoria-combinaciones .btn-outline.btn-hover-background {
+    border-color: #1565C0;
+    background-color: transparent;
+    color: #1565C0;
+}
+
+.categoria-combinaciones .btn-outline.btn-hover-background:hover,
+.categoria-combinaciones .btn-outline.btn-hover-background:focus-visible {
+    border-color: #0D47A1;
+    background-color: #0D47A1;
+    color: #FFFFFF;
+}
+
+.categoria-combinaciones .btn-glow-pulse {
+    border-color: #22D3EE;
+    background: linear-gradient(110deg, #1565C0, #0D47A1);
+    animation: btn-glow-pulse 1.8s ease-in-out infinite;
+}
+
 /* Categoría 10: botones de diseño avanzado */
 .btn-neon {
     border-color: #22D3EE;
@@ -1197,4 +1221,10 @@
 .btn-original:hover::before,
 .btn-original:focus-visible::before {
     left: 135%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .categoria-combinaciones .btn-glow-pulse {
+        animation: none;
+    }
 }
