@@ -1,0 +1,85 @@
+:root {
+    --color-primario: #1565C0;
+    --color-texto-claro: #FFFFFF;
+    --color-texto-oscuro: #111827;
+    --color-sombra: #111827;
+}
+
+/* Propiedades compartidas por todos los botones de la librería */
+.btn {
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--color-primario);
+    border-radius: 0.25rem;
+    background-color: var(--color-primario);
+    box-shadow: 0 2px 4px rgba(17, 24, 39, 0.2);
+    color: var(--color-texto-claro);
+    font: inherit;
+    cursor: pointer;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--color-sombra);
+    outline-offset: 3px;
+}
+
+/* Categoría 1: fundamentos y colores */
+.btn-primary {
+    border-color: #1565C0;
+    background-color: #1565C0;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    border-color: #D1D5DB;
+    background-color: #D1D5DB;
+    color: #111827;
+}
+
+.btn-success {
+    border-color: #16703C;
+    background-color: #16703C;
+    color: #FFFFFF;
+}
+
+.btn-danger {
+    border-color: #B91C1C;
+    background-color: #B91C1C;
+    color: #FFFFFF;
+}
+
+.btn-warning {
+    border-color: #FACC15;
+    background-color: #FACC15;
+    color: #111827;
+}
+
+.btn-info {
+    border-color: #67E8F9;
+    background-color: #67E8F9;
+    color: #111827;
+}
+
+.btn-dark {
+    border-color: #1F2937;
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.btn-light {
+    border-color: #6B7280;
+    background-color: #F9FAFB;
+    color: #111827;
+}
+
+.btn-text {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    color: #1565C0;
+}
+
+.btn-custom {
+    border-color: #6D28D9;
+    background-color: #6D28D9;
+    color: #FFFFFF;
+}
