@@ -548,3 +548,251 @@
     opacity: 1;
     transform: translateX(0);
 }
+
+/* Categoría 8: efectos con pseudoelementos */
+.btn-fill-left,
+.btn-fill-bottom,
+.btn-fill-center,
+.btn-shine,
+.btn-underline-expand,
+.btn-corners,
+.btn-double-layer,
+.btn-circle-expand,
+.btn-border-reveal,
+.btn-diagonal-sweep {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.btn-fill-left > span,
+.btn-fill-bottom > span,
+.btn-fill-center > span,
+.btn-shine > span,
+.btn-underline-expand > span,
+.btn-corners > span,
+.btn-double-layer > span,
+.btn-circle-expand > span,
+.btn-border-reveal > span,
+.btn-diagonal-sweep > span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-fill-left,
+.btn-fill-bottom,
+.btn-fill-center,
+.btn-double-layer,
+.btn-circle-expand,
+.btn-diagonal-sweep {
+    background-color: #1565C0;
+    color: #FFFFFF;
+}
+
+.btn-fill-left::before,
+.btn-fill-bottom::before,
+.btn-fill-center::before,
+.btn-shine::before,
+.btn-underline-expand::after,
+.btn-corners::before,
+.btn-corners::after,
+.btn-double-layer::before,
+.btn-double-layer::after,
+.btn-circle-expand::before,
+.btn-border-reveal::before,
+.btn-diagonal-sweep::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.btn-fill-left::before {
+    z-index: 0;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: #0D47A1;
+    transition: transform 0.35s ease;
+}
+
+.btn-fill-left:hover::before,
+.btn-fill-left:focus-visible::before {
+    transform: scaleX(1);
+}
+
+.btn-fill-bottom::before {
+    z-index: 0;
+    inset: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    background-color: #0D47A1;
+    transition: transform 0.35s ease;
+}
+
+.btn-fill-bottom:hover::before,
+.btn-fill-bottom:focus-visible::before {
+    transform: scaleY(1);
+}
+
+.btn-fill-center::before {
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #0D47A1;
+    transition: width 0.35s ease;
+}
+
+.btn-fill-center:hover::before,
+.btn-fill-center:focus-visible::before {
+    width: 100%;
+}
+
+.btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shine::before {
+    z-index: 0;
+    top: -20%;
+    left: -80%;
+    width: 55%;
+    height: 140%;
+    transform: skewX(-22deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-shine:hover::before,
+.btn-shine:focus-visible::before {
+    left: 130%;
+}
+
+.btn-underline-expand {
+    background-color: #FFFFFF;
+    color: #1565C0;
+}
+
+.btn-underline-expand::after {
+    bottom: 0.35rem;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: #1565C0;
+    transition: width 0.3s ease;
+}
+
+.btn-underline-expand:hover::after,
+.btn-underline-expand:focus-visible::after {
+    width: calc(100% - 1rem);
+}
+
+.btn-corners::before,
+.btn-corners::after {
+    width: 0.65rem;
+    height: 0.65rem;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.btn-corners::before {
+    top: 0.2rem;
+    left: 0.2rem;
+    transform: translate(-0.2rem, -0.2rem);
+    border-top: 2px solid #FACC15;
+    border-left: 2px solid #FACC15;
+}
+
+.btn-corners::after {
+    right: 0.2rem;
+    bottom: 0.2rem;
+    transform: translate(0.2rem, 0.2rem);
+    border-right: 2px solid #FACC15;
+    border-bottom: 2px solid #FACC15;
+}
+
+.btn-corners:hover::before,
+.btn-corners:hover::after,
+.btn-corners:focus-visible::before,
+.btn-corners:focus-visible::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.btn-double-layer::before,
+.btn-double-layer::after {
+    z-index: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    transition: transform 0.35s ease;
+}
+
+.btn-double-layer::before {
+    left: 0;
+    transform: translateX(-105%);
+    background-color: #0D47A1;
+}
+
+.btn-double-layer::after {
+    right: 0;
+    transform: translateX(105%);
+    background-color: #4C1D95;
+}
+
+.btn-double-layer:hover::before,
+.btn-double-layer:focus-visible::before,
+.btn-double-layer:hover::after,
+.btn-double-layer:focus-visible::after {
+    transform: translateX(0);
+}
+
+.btn-circle-expand::before {
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #0D47A1;
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-circle-expand:hover::before,
+.btn-circle-expand:focus-visible::before {
+    width: 16rem;
+    height: 16rem;
+}
+
+.btn-border-reveal::before {
+    inset: 0;
+    clip-path: inset(0 100% 0 0);
+    border: 2px solid #0D47A1;
+    transition: clip-path 0.35s ease;
+}
+
+.btn-border-reveal:hover::before,
+.btn-border-reveal:focus-visible::before {
+    clip-path: inset(0);
+}
+
+.btn-diagonal-sweep::before {
+    z-index: 0;
+    top: -25%;
+    left: -120%;
+    width: 80%;
+    height: 150%;
+    transform: skewX(-25deg);
+    background-color: #0D47A1;
+    transition: left 0.4s ease;
+}
+
+.btn-diagonal-sweep:hover::before,
+.btn-diagonal-sweep:focus-visible::before {
+    left: 140%;
+}
