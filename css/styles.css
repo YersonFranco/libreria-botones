@@ -361,3 +361,95 @@
     background-color: #0D47A1;
     transform: translateY(-3px);
 }
+
+/* Categoría 6: transformaciones */
+.btn-grow,
+.btn-shrink,
+.btn-lift,
+.btn-move-right,
+.btn-rotate,
+.btn-skew,
+.btn-perspective,
+.btn-transform-combined {
+    transition: transform 0.25s ease;
+}
+
+.btn-grow:hover,
+.btn-grow:focus-visible {
+    transform: scale(1.08);
+}
+
+.btn-shrink:hover,
+.btn-shrink:focus-visible {
+    transform: scale(0.92);
+}
+
+.btn-lift:hover,
+.btn-lift:focus-visible {
+    transform: translateY(-4px);
+}
+
+.btn-move-right:hover,
+.btn-move-right:focus-visible {
+    transform: translateX(6px);
+}
+
+.btn-rotate:hover,
+.btn-rotate:focus-visible {
+    transform: rotate(5deg);
+}
+
+.btn-skew:hover,
+.btn-skew:focus-visible {
+    transform: skew(-6deg);
+}
+
+.btn-skew > span {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.btn-skew:hover > span,
+.btn-skew:focus-visible > span {
+    transform: skew(6deg);
+}
+
+.btn-press:active {
+    transform: translateY(2px);
+}
+
+.btn-perspective {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.btn-perspective:hover,
+.btn-perspective:focus-visible {
+    transform: perspective(400px) rotateX(8deg) rotateY(-8deg);
+}
+
+.btn-icon-move {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icono-movimiento {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.btn-icon-move:hover .icono-movimiento,
+.btn-icon-move:focus-visible .icono-movimiento {
+    transform: translateX(5px);
+}
+
+.btn-transform-combined {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-transform-combined:hover,
+.btn-transform-combined:focus-visible {
+    box-shadow: 0 8px 14px rgba(17, 24, 39, 0.35);
+    transform: translateY(-4px) scale(1.05);
+}
