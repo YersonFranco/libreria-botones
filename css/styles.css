@@ -948,3 +948,253 @@
         animation: none;
     }
 }
+
+/* Categoría 10: botones de diseño avanzado */
+.btn-neon {
+    border-color: #22D3EE;
+    background-color: #111827;
+    box-shadow: 0 0 7px rgba(34, 211, 238, 0.5);
+    color: #FFFFFF;
+    transition: box-shadow 0.25s ease;
+}
+
+.btn-neon:hover,
+.btn-neon:focus-visible {
+    box-shadow: 0 0 8px #22D3EE, 0 0 20px #22D3EE;
+}
+
+.escenario-cristal {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #1E3A8A;
+}
+
+.btn-glass {
+    border-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+}
+
+@supports (backdrop-filter: blur(8px)) {
+    .btn-glass {
+        backdrop-filter: blur(8px);
+    }
+}
+
+.escenario-neumorphic {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #E5E7EB;
+}
+
+.btn-neumorphic {
+    border-color: #E5E7EB;
+    border-radius: 0.75rem;
+    background-color: #E5E7EB;
+    box-shadow: 7px 7px 14px #9CA3AF, -7px -7px 14px #FFFFFF;
+    color: #111827;
+    transition: box-shadow 0.2s ease;
+}
+
+.btn-neumorphic:active {
+    box-shadow: inset 5px 5px 9px #9CA3AF, inset -5px -5px 9px #FFFFFF;
+}
+
+.btn-retro-3d {
+    border-color: #111827;
+    background-color: #FACC15;
+    box-shadow: 0 5px 0 #111827;
+    color: #111827;
+    transform: translateY(0);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn-retro-3d:active {
+    box-shadow: 0 1px 0 #111827;
+    transform: translateY(4px);
+}
+
+.btn-metallic {
+    position: relative;
+    overflow: hidden;
+    border-color: #111827;
+    background: linear-gradient(115deg, #E5E7EB, #9CA3AF, #F9FAFB, #9CA3AF);
+    background-size: 200% 100%;
+    color: #111827;
+}
+
+.btn-metallic > span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-metallic::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -80%;
+    width: 45%;
+    height: 140%;
+    transform: skewX(-22deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transition: left 0.45s ease;
+}
+
+.btn-metallic:hover::before,
+.btn-metallic:focus-visible::before {
+    left: 135%;
+}
+
+.btn-rainbow-border {
+    border: 3px solid transparent;
+    background: linear-gradient(#111827, #111827) padding-box,
+                linear-gradient(90deg, #1565C0, #6D28D9, #B91C1C, #1565C0) border-box;
+    background-size: 100% 100%, 300% 300%;
+    background-position: 0 0, 0% 50%;
+    color: #FFFFFF;
+    animation: btn-rainbow-border 3s linear infinite;
+}
+
+@keyframes btn-rainbow-border {
+    to { background-position: 0 0, 100% 50%; }
+}
+
+.btn-double-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-inicial,
+.texto-nuevo {
+    display: block;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.texto-nuevo {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.btn-double-text:hover .texto-inicial,
+.btn-double-text:focus-visible .texto-inicial {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.btn-double-text:hover .texto-nuevo,
+.btn-double-text:focus-visible .texto-nuevo {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btn-cinematic {
+    min-width: 12rem;
+    min-height: 3rem;
+    border-color: #111827;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url("../img/button-landscape.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.btn-cinematic:hover,
+.btn-cinematic:focus-visible {
+    filter: brightness(1.15);
+    transform: scale(1.04);
+}
+
+.btn-premium,
+.btn-original {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #FFFFFF;
+}
+
+.btn-premium {
+    position: relative;
+    overflow: hidden;
+    border-color: #1E3A8A;
+    background: linear-gradient(110deg, #1E3A8A, #6D28D9);
+    box-shadow: 0 4px 10px #111827;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-premium::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -65%;
+    width: 35%;
+    height: 140%;
+    transform: skewX(-22deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.4s ease;
+}
+
+.icono-premium {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.btn-premium > span:last-child {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-premium:hover,
+.btn-premium:focus-visible {
+    box-shadow: 0 7px 16px #111827;
+    transform: translateY(-3px) scale(1.03);
+}
+
+.btn-premium:hover::before,
+.btn-premium:focus-visible::before {
+    left: 135%;
+}
+
+.btn-original {
+    position: relative;
+    overflow: hidden;
+    border-color: #6D28D9;
+    border-radius: 9999px;
+    background: linear-gradient(110deg, #1E3A8A, #6D28D9);
+    box-shadow: 0 4px 10px rgba(17, 24, 39, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-original > span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-original::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -70%;
+    width: 35%;
+    height: 140%;
+    transform: skewX(-22deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: left 0.4s ease;
+}
+
+.btn-original:hover,
+.btn-original:focus-visible {
+    box-shadow: 0 8px 16px rgba(17, 24, 39, 0.5);
+    transform: translateY(-3px) scale(1.04);
+}
+
+.btn-original:hover::before,
+.btn-original:focus-visible::before {
+    left: 135%;
+}
