@@ -83,3 +83,56 @@
     background-color: #6D28D9;
     color: #FFFFFF;
 }
+
+/* Categoría 2: bordes, tamaños y formas */
+.btn-outline {
+    border-color: #1565C0;
+    background-color: transparent;
+    box-shadow: none;
+    color: #1565C0;
+}
+
+.btn-border-thick {
+    border-width: 4px;
+}
+
+.btn-border-dashed {
+    border-style: dashed;
+}
+
+.btn-border-dotted {
+    border-style: dotted;
+}
+
+.btn-rounded {
+    border-radius: 0.75rem;
+}
+
+.btn-pill {
+    border-radius: 9999px;
+}
+
+.btn-circle {
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.btn-small {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8rem;
+}
+
+.btn-large {
+    padding: 0.9rem 1.4rem;
+    font-size: 1.25rem;
+}
+
+.btn-full {
+    width: 100%;
+}
