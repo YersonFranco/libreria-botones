@@ -1228,3 +1228,83 @@
         animation: none;
     }
 }
+
+/* Presentación del catálogo por categorías */
+body {
+    margin: 0;
+    background-color: #F1F5F9;
+    color: #1F2937;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > header,
+body > footer {
+    padding: 1.5rem max(1rem, calc((100% - 72rem) / 2));
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+}
+
+body > header h1 {
+    margin: 0 0 0.5rem;
+}
+
+body > header p,
+body > footer p {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    width: min(100% - 2rem, 72rem);
+    gap: 1.5rem;
+    margin: 2rem auto;
+}
+
+main > section {
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid #E2E8F0;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.08);
+}
+
+main > section > h2 {
+    margin-top: 0;
+    color: #1E3A8A;
+}
+
+main > section > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+main > section > ul > li {
+    display: flex;
+    min-width: 0;
+    min-height: 5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    background-color: #F8FAFC;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+main > section > ul > li:hover,
+main > section > ul > li:focus-within {
+    border-color: #BFDBFE;
+    box-shadow: 0 3px 10px rgba(17, 24, 39, 0.08);
+}
+
+main > section > ul > li > button {
+    max-width: 100%;
+}
+
+body > footer {
+    text-align: center;
+}
