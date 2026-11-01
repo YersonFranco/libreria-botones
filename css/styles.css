@@ -796,3 +796,155 @@
 .btn-diagonal-sweep:focus-visible::before {
     left: 140%;
 }
+
+/* Categoría 9: animaciones CSS */
+.btn-pulse {
+    animation: btn-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes btn-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+}
+
+.btn-heartbeat {
+    animation: btn-heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes btn-heartbeat {
+    0%, 40%, 100% { transform: scale(1); }
+    8% { transform: scale(1.12); }
+    16% { transform: scale(0.98); }
+    24% { transform: scale(1.08); }
+}
+
+.btn-float {
+    animation: btn-float 2s ease-in-out infinite;
+}
+
+@keyframes btn-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.btn-shake:hover,
+.btn-shake:focus-visible {
+    animation: btn-shake 0.45s ease-in-out;
+}
+
+@keyframes btn-shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
+}
+
+.btn-bounce:hover,
+.btn-bounce:focus-visible {
+    animation: btn-bounce 0.65s ease;
+}
+
+@keyframes btn-bounce {
+    0%, 100% { transform: translateY(0); }
+    35% { transform: translateY(-8px); }
+    60% { transform: translateY(2px); }
+    80% { transform: translateY(-3px); }
+}
+
+.btn-glow-pulse {
+    border-color: #111827;
+    background-color: #111827;
+    color: #FFFFFF;
+    animation: btn-glow-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes btn-glow-pulse {
+    0%, 100% { box-shadow: 0 0 4px rgba(34, 211, 238, 0.35); }
+    50% { box-shadow: 0 0 18px #22D3EE; }
+}
+
+.btn-gradient-motion {
+    border-color: #1E3A8A;
+    background: linear-gradient(110deg, #1E3A8A, #6D28D9, #1E3A8A);
+    background-size: 200% 200%;
+    color: #FFFFFF;
+    animation: btn-gradient-motion 3s ease-in-out infinite;
+}
+
+@keyframes btn-gradient-motion {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.btn-icon-spin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icono-giratorio {
+    display: inline-block;
+}
+
+.btn-icon-spin:hover .icono-giratorio,
+.btn-icon-spin:focus-visible .icono-giratorio {
+    animation: btn-icon-spin 0.7s ease-in-out;
+}
+
+@keyframes btn-icon-spin {
+    to { transform: rotate(360deg); }
+}
+
+.btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    border-color: #0D47A1;
+    background-color: #0D47A1;
+    color: #FFFFFF;
+    cursor: wait;
+}
+
+.indicador-carga {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: btn-loading-spin 0.8s linear infinite;
+}
+
+@keyframes btn-loading-spin {
+    to { transform: rotate(360deg); }
+}
+
+.btn-sequence:hover,
+.btn-sequence:focus-visible {
+    animation: btn-sequence 1.2s ease-in-out both;
+}
+
+@keyframes btn-sequence {
+    0% { transform: translateY(0) scale(1); box-shadow: 0 2px 4px rgba(17, 24, 39, 0.2); }
+    25% { transform: translateY(-6px) scale(1); }
+    50% { transform: translateY(-6px) scale(1.08); }
+    75% { transform: translateY(0) scale(1.08); box-shadow: 0 8px 15px rgba(17, 24, 39, 0.4); }
+    100% { transform: translateY(0) scale(1); box-shadow: 0 2px 4px rgba(17, 24, 39, 0.2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-pulse,
+    .btn-heartbeat,
+    .btn-float,
+    .btn-glow-pulse,
+    .btn-gradient-motion,
+    .indicador-carga,
+    .btn-shake:hover,
+    .btn-shake:focus-visible,
+    .btn-bounce:hover,
+    .btn-bounce:focus-visible,
+    .btn-icon-spin:hover .icono-giratorio,
+    .btn-icon-spin:focus-visible .icono-giratorio,
+    .btn-sequence:hover,
+    .btn-sequence:focus-visible {
+        animation: none;
+    }
+}
